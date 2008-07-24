@@ -1,0 +1,161 @@
+/*czarne pola*/
+#field1a, #field1c, #field1e, #field1g,
+#field2b, #field2d, #field2f, #field2h,
+#field3a, #field3c, #field3e, #field3g,
+#field4b, #field4d, #field4f, #field4h,
+#field5a, #field5c, #field5e, #field5g,
+#field6b, #field6d, #field6f, #field6h,
+#field7a, #field7c, #field7e, #field7g,
+#field8b, #field8d, #field8f, #field8h {
+	background-color: black;
+	height: 50px;
+	width: 50px;
+	border:1px solid black;	
+}
+/*biale pola*/
+#field1b, #field1d, #field1f, #field1h,
+#field2a, #field2c, #field2e, #field2g,
+#field3b, #field3d, #field3f, #field3h,
+#field4a, #field4c, #field4e, #field4g,
+#field5b, #field5d, #field5f, #field5h,
+#field6a, #field6c, #field6e, #field6g,
+#field7b, #field7d, #field7f, #field7h,
+#field8a, #field8c, #field8e, #field8g {
+	background-color: white;
+	height: 50px;
+	width: 50px;
+	border:1px solid white;
+}
+#letter8,#letter7, #letter6, #letter5, #letter4, #letter3, #letter2, #letter1{
+	clear: left;
+	float: left;
+	height: 50px;
+	width: 20px;
+}
+div#ground p.nr-position {
+	text-align: left;
+}
+#field8a, #field8b, #field8c, #field8d, #field8e, #field8f, #field8g, #field8h,
+#field7a, #field7b, #field7c, #field7d, #field7e, #field7f, #field7g, #field7h,
+#field6a, #field6b, #field6c, #field6d, #field6e, #field6f, #field6g, #field6h,
+#field5a, #field5b, #field5c, #field5d, #field5e, #field5f, #field5g, #field5h, 
+#field4a, #field4b, #field4c, #field4d, #field4e, #field4f, #field4g, #field4h,
+#field3a, #field3b, #field3c, #field3d, #field3e, #field3f, #field3g, #field3h,
+#field2a, #field2b, #field2c, #field2d, #field2e, #field2f, #field2g, #field2h,
+#field1a, #field1b, #field1c, #field1d, #field1e, #field1f, #field1g, #field1h {
+	float: left;
+}
+div#noletter{
+	clear:left;
+	float:left;
+	height: 20px;
+	width: 20px;
+}
+div.letters {
+	float:left;
+	width: 50px;
+	height: 20px;
+	border: 0pt solid ;
+}
+div#ground {
+	width: 450px;
+	height: 450px;
+	color: maroon;
+}
+div.letters {
+	background-color: transparent;
+	height: 20px;
+	width: 50px;
+	border: 1px solid transparent;
+}
+
+#header {
+	height: 50px;
+	font-weight: 800;
+	font-size: 2em;
+	padding-left: 100px;
+}
+#move, #board, #rules {
+	padding: 20px;
+	margin: 10px 0;
+	border-top: #BC8F8F ridge 1px;
+	border-right: #BC8F8F outset 1px;
+	border-bottom: #BC8F8F outset 1px;
+	border-left: #BC8F8F ridge 1px;
+}
+#move {
+	clear: right;
+	float: right;	
+	width: 450px;
+}
+#board {
+	float: right;
+	top: 50px;
+	width: 450px;
+	text-align:center;
+}
+#rules {
+	float: left;
+	top: 50px;
+	width: 400px;
+}
+#footer {
+	clear: both;
+	height: 16px;
+	margin-top: 20px;
+	background: maroon;
+	text-align: center;
+	font-family: Garamond, Georgia, Courier;
+}
+body , td, th {
+	font-size: 15px;
+	font-family: Georgia,Garamond, Times;
+	color: black;
+	background:  white url(../img/tlo.jpg) 0 0px repeat-x;
+}
+#container {
+	width:1000px;
+	margin: 0 auto;
+}
+a:link{ 
+	text-decoration: underline;
+	color: #BC8F8F; 
+}				 
+a:visited { 
+	color:#AE686E; 
+	font-weight:none; 
+	text-decoration: underline;
+	height:0px;
+}				
+a:hover { 
+	color: #AE686E; 
+	height: 0px;
+	text-decoration: underline; 
+	background: #3E151F;
+}
+.small {
+	font-weight: normal;
+	font-size: 0.8em;
+	letter-spacing: 0.1ex;
+	color: white;
+}
+
+label {
+    	display: block;
+   	width: 100px;
+}
+fieldset {
+	border-top: #BC8F8F ridge 1px;
+	border-right: #BC8F8F outset 1px;
+	border-bottom: #BC8F8F outset 1px;
+	border-left: #BC8F8F ridge 1px;
+    	padding: 0;
+}
+
+.selected{
+	border:1px solid red !important;
+}
+
+.center {
+	text-align: center;
+}
