@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Skoczki - gra planszowa</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8"/>
+	<script src="js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+	/*<![CDATA]  if (2 &lt; 4) {*/
+		$(function() {
+		  
+		  $('.pawn').click(function(){
+		    		    
+		    // zaznaczamy aktywne pole
+		    $('.selected').removeClass('selected')
+        $(this).addClass('selected')
+        
+        // sprawdz czy na polu jest pionek
+        var x = $(this).find('img')
+        
+        if(x.length == 0){
+          var id_pola = $(this).attr('id').replace('field','')
+          $('#where').val(id_pola)     
+          $('#plansza').submit()    
+        } 
+        else{          
+          // ustawiamy ruch z pola
+          var id_pola = $(this).attr('id').replace('field','')
+          $('#from').val(id_pola)
+        }
+        
+        
+        
+		  })
+			
+			
+		})
+	/*}]]>*/
+</script>
+</head>
+<body>
+<div id="container">
+<div id="header">Skoczki</div>
+<div id="rules">
+<p class="text">
+Gra dla dwóch, wymaga 16 pionów dla każdego gracza.
+Grę rozpoczyna grający zielonymi pionkami.
+</p>
+
+<p class="title">Cel:</p>
+<p class="text">
+Celem gry jest przestawienie wszystkich swoich pionków na pozycje zajmowane na początku przez przeciwnika, czyli przeciwległe. Gracz, który pierwszy tego dokona - wygrywa.
+Mechanika gry
+</p>
+
+<p class="title">Ruch polega na:</p>
+    <ul>
+    <li>
+      przesunięciu swojego pionka na dowolne sąsiednie pole wolne poziomo lub pionowo (do przodu, do tyłu lub na boki)
+    </li>
+    <li>
+      przeskoczeniu przez pionek własne lub przeciwnika z pola bezpośrednio sąsiadującego z przeskakiwanym pionem na pole bezpośrednio za nim
+    </li>
+    <li>
+      przeskoczeniu kilku pionów swoich lub przeciwnika z pola bezpośrednio sąsiadującego z przeskakiwanym pionem na pole bezpośrednio za nim
+    </li>
+    <li>
+      wykananiu całej serii skoków jednym pionkiem zgodnie z dwiema poprzednimi zasadami - zmiana kierunku kolejnych skoków jest możliwa
+	</li>
+	</ul>
+<p class="text">Pionki nie biją się wzajemnie. Nie ma możliwości gry remisowej. 
+</p>
+</div><!--rules end -->
+<div id="board"> 
+<form method="get" name="form-board" id="plansza">
+<!--<img src="img/plansza.gif" alt="plansza" />-->
+<div id="ground">
+
+<div id="letter8"><p class="nr-position">8</p></div> 
+<div id="field8a" class="pawn">
+  <input type="hidden" id="input_8a" name="8a" value="0" />
+</div>
+<div id="field8b" class="pawn">
+  <input type="hidden" id="input_8b" name="8b" value="1" />  
+  <img src="img/pawnc.png" alt="pawnb" />
+</div> 
+<div id="field8c" class="pawn"></div> 
+<div id="field8d" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field8e" class="pawn"></div> 
+<div id="field8f" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field8g" class="pawn"></div> 
+<div id="field8h" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div>
+
+<div id="letter7" class="pawn"><p class="nr-position">7</p></div> 
+<div id="field7a" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field7b" class="pawn"></div> 
+<div id="field7c" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field7d" class="pawn"></div> 
+<div id="field7e" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field7f" class="pawn"></div> 
+<div id="field7g" class="pawn"><img src="img/pawnc.png" alt="pawnb" /></div> 
+<div id="field7h" class="pawn"></div>
+
+<div id="letter6"><p class="nr-position">6</p></div> 
+<div id="field6a" class="pawn"></div> 
+<div id="field6b" class="pawn"></div> 
+<div id="field6c" class="pawn"></div> 
+<div id="field6d" class="pawn"></div> 
+<div id="field6e" class="pawn"></div> 
+<div id="field6f" class="pawn"></div> 
+<div id="field6g" class="pawn"></div> 
+<div id="field6h" class="pawn"></div>
+
+<div id="letter5"><p class="nr-position">5</p></div> 
+<div id="field5a" class="pawn"></div> 
+<div id="field5b" class="pawn"></div>
+<div id="field5c" class="pawn"></div>
+<div id="field5d" class="pawn"></div> 
+<div id="field5e" class="pawn"></div> 
+<div id="field5f" class="pawn"></div> 
+<div id="field5g" class="pawn"></div> 
+<div id="field5h" class="pawn"></div>
+
+<div id="letter4"><p class="nr-position">4</p></div> 
+<div id="field4a" class="pawn"></div> 
+<div id="field4b" class="pawn"></div> 
+<div id="field4c" class="pawn"></div> 
+<div id="field4d" class="pawn"></div> 
+<div id="field4e" class="pawn"></div> 
+<div id="field4f" class="pawn"></div> 
+<div id="field4g" class="pawn"></div> 
+<div id="field4h" class="pawn"></div>
+
+<div id="letter3"><p class="nr-position">3</p></div> 
+<div id="field3a" class="tu"></div> 
+<div id="field3b" class="pawn"></div> 
+<div id="field3c" class="pawn"></div> 
+<div id="field3d" class="pawn"></div> 
+<div id="field3e" class="pawn"></div> 
+<div id="field3f" class="pawn"></div> 
+<div id="field3g" class="pawn"></div> 
+<div id="field3h" class="pawn"></div>
+
+<div id="letter2"><p class="nr-position">2</p></div> 
+<div id="field2a" class="pawn"></div> 
+<div id="field2b" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field2c" class="pawn"></div> 
+<div id="field2d" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field2e" class="pawn"></div> 
+<div id="field2f" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field2g" class="pawn"></div> 
+<div id="field2h" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div>
+
+<div id="letter1"><p class="nr-position">1</p></div> 
+<div id="field1a" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field1b" class="pawn"></div> 
+<div id="field1c" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div>
+<div id="field1d" class="pawn"></div> 
+<div id="field1e" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field1f" class="pawn"></div> 
+<div id="field1g" class="pawn"><img src="img/pawnb.png" alt="pawnb" /></div> 
+<div id="field1h" class="pawn"></div>
+
+<div id="noletter"></div> <div class="letters"><p>A</p></div> <div class="letters"><p>B</p></div> <div class="letters"><p>C</p></div> <div class="letters"><p>D</p></div> <div class="letters"><p>E</p></div> <div class="letters"><p>F</p></div> <div class="letters"><p>G</p></div> <div class="letters"><p>H</p></div>
+
+<input type="text" name="from" val="" id="from" />
+<input type="text" name="where" val="" id="where" />
+
+<!-- hiddeny -->
+</div><!--ground end -->
+</form>
+</div><!--board end -->
+<div id="move"> 
+ <form action="">
+    <fieldset>
+      <legend>Ruch, wypis akcji</legend>
+      <!-- Skąd: <input class="text" name="ruch-skad" value=""/> dokąd   <input class="text" name="ruch-dokad" value=""/>      -->
+      
+    </fieldset>
+  </form>
+
+
+<!--tu forma-->
+</div>
+
+<div id="footer">
+<p class="small">Projekt CGI - Natalia Stanko 2009 &copy; </p>
+</div>
+
+</div>
+</body>
+
+</html>
